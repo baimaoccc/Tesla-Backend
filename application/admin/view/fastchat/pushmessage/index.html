@@ -1,0 +1,49 @@
+<div class="row animated fadeInRight">
+
+    <div class="col-md-6">
+        <div class="box box-success">
+            <div class="panel-heading">
+                推送消息
+            </div>
+            <div class="panel-body">
+
+                <form id="push-message" role="form" method="POST" data-toggle="validator" action="{:url('fastchat.pushmessage/index')}">
+                    <div class="box-body box-profile">
+
+                        <div class="form-group">
+                            <label for="serviceuser_id" class="control-label">服务账号:</label>
+                            <input id="serviceuser_id" data-source="fastchat/serviceuser/index" data-field="nickname" class="form-control selectpage" name="row[serviceuser_id]" type="text" value="" />
+                            <span class="help-block">使用此服务号来发送本条消息</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="group_id" class="control-label">用户分组:</label>
+                            <input id="group_id" data-multiple="true" data-source="user/group/index" class="form-control selectpage" name="row[group_id]" type="text" value="" />
+                            <span class="help-block">消息将推送给此分组中的所有用户</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="admin_group_id" class="control-label">管理分组:</label>
+                            <input id="admin_group_id" data-multiple="true" data-source="auth/group/index" class="form-control selectpage" name="row[admin_group_id]" type="text" value="" />
+                            <span class="help-block">消息将推送给此管理员分组中的所有管理员</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="control-label">消息内容:</label>
+                            <textarea id="message" rows="5" class="form-control" name="row[message]"></textarea>
+                            <span class="help-block">可使用HTML标签：a、img、div、br</span>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success">{:__('Submit')}</button>
+                            <button type="reset" class="btn btn-default">{:__('Reset')}</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,2 @@
+php fastchat_start_for_win\start_businessworker.php php fastchat_start_for_win\start_gateway.php php fastchat_start_for_win\start_register.php php fastchat_start_for_win\start_text_gateway.php
+pause
