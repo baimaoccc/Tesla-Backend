@@ -4,8 +4,13 @@
 /runtime/*
 /addons/*
 /public/assets/libs/
+/public/static/*
+static/media/*
+static/css/*
+static/js/*
 /public/assets/addons/*
 /public/uploads/*
+.well-known/*
 .idea
 composer.lock
 *.log
